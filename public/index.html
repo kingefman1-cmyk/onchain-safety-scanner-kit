@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Token Safety Scanner</title>
+<meta name="description" content="Read-only safety screen for tokens and Solana mints: authorities, holder concentration, liquidity and risk flags.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><strong id="brand">Token Safety Scanner</strong></div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1>Screen a token before you touch it.</h1>
+    <p class="sub">Paste a token contract or Solana mint. You get a safety score, the risk flags behind it, liquidity depth and the key on-chain facts. This tool is read-only: it never connects a wallet and never sends a transaction.</p>
+    <form id="f" class="row" autocomplete="off">
+      <label class="sr" for="addr">Token or mint address</label>
+      <input id="addr" name="address" type="text" placeholder="0x… or Solana mint address" required maxlength="64" spellcheck="false">
+      <label class="sr" for="chain">Chain</label>
+      <select id="chain"><option value="">Auto-detect</option><option value="base">Base</option><option value="ethereum">Ethereum</option><option value="arbitrum">Arbitrum</option><option value="optimism">Optimism</option><option value="solana">Solana</option></select>
+      <button id="go" type="submit">Scan</button>
+    </form>
+    <p id="status" class="status" role="status"></p>
+  </section>
+
+  <section id="out" hidden>
+    <div class="grid">
+      <div class="card"><h2>Safety score</h2><div id="score"></div></div>
+      <div class="card"><h2>Liquidity</h2><div id="liq"></div></div>
+    </div>
+    <div class="card"><h2>Risk flags</h2><ul id="flags"></ul></div>
+    <div class="card"><h2>On-chain details</h2><div id="det"></div></div>
+    <p id="disc" class="muted"></p>
+    <div class="card">
+      <h2>Embed a live badge</h2>
+      <p class="muted">Show your own site's email-authentication status. The badge links to Caelara Labs.</p>
+      <div class="row"><label class="sr" for="bd">Your domain</label><input id="bd" type="text" placeholder="yourdomain.com"></div>
+      <p><img id="bimg" alt="Badge preview" height="20"></p>
+      <label for="md">Markdown</label><textarea id="md" readonly rows="2"></textarea>
+      <label for="ht">HTML</label><textarea id="ht" readonly rows="3"></textarea>
+    </div>
+  </section>
+</main>
+<footer class="wrap muted foot">Data by <a href="https://caelaralabs.com" rel="noopener">Caelara Labs</a>. A heuristic screen, not financial advice: a low risk score is not a guarantee.</footer>
+<script src="/app.js" type="module"></script>
+</body>
+</html>
