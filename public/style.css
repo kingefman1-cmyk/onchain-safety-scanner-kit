@@ -26,3 +26,6 @@ code{background:#0d1620;padding:1px 5px;border-radius:4px}
 .sr{position:absolute;left:-9999px}
 .foot{padding:24px 16px 40px;font-size:.9rem}
 label{font-size:.9rem;color:var(--mute)}
+
+.foot .powered{display:inline-block;margin-left:12px;vertical-align:middle}
+.foot .powered img{display:block}

@@ -1,3 +1,5 @@
+[![Powered by Caelara Labs](https://benchmarks.caelaralabs.com/verify/powered-by.svg)](https://caelaralabs.com)
+
 # Token & Mint Safety Scanner (white-label starter)
 
 A small Cloudflare Pages site that screens an EVM token or a Solana mint: safety score, the risk flags behind it, liquidity depth and key on-chain facts. Put your own name on it and run it for your community, or as the front end of your own paid service.
